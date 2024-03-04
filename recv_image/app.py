@@ -14,8 +14,7 @@ app = App(token=SLACK_BOT_TOKEN)
 @app.event("app_mention")
 def handle_mention(event, say):
     print("handle_mention")
-    query = "test"
-    say(query)
+    say(str(event))
 
 
 # アプリを起動します
