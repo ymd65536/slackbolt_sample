@@ -118,7 +118,8 @@ def handle_mention(event, say):
             if image is None or not mime_type == "image/png":
                 say(f"画像リンクから画像が読み取れませんでした。{upload_file_name}", thread_ts=thread_id)
             else:
-                bucket_name = "check-images"
+                # Slackに送ったファイルを保存しておくバケット名
+                bucket_name = os.environ.get("BUCKET_NAME", "")
                 storage_client = storage.Client()
                 bucket = storage_client.bucket(bucket_name)
 
