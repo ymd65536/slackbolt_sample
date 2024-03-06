@@ -26,8 +26,10 @@ Bot Token Scopes for SLACK_BOT_TOKEN is chat:write, files:read, app_mentions:rea
 You get SLACK_APP_TOKEN from "Basic Information" page.
 Applicaiton Scope for SLACK_APP_TOKEN is connections:write.
 
-## attension
+## attention
 
 - Event Subscription is required
   - Set `Enable Events` to `On`
 - When Scope is changed, you need to reinstall the app.
+- When execute by Enable Socket Mode, Set `Enable Socket Mode` to `On`.
+- When execute by Enable Socket Mode, do not set APP_ENVIRONMENT Environment Variable.
